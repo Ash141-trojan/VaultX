@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(
+        -45deg,
+        #2947cc,
+        #764ba2,
+        #6213b2,
+        #4facfe
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container{
+    border: 2px solid rgba(79, 78, 78, 0.19);
+    border-radius: 8px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    
+}
+
+.container h2{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: xxx-large;
+    color: chocolate;
+}
+
+.input-group{
+    margin-bottom: 20px;
+}
+
+.input-group label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color:floralwhite ;
+}
+
+.input-group input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+.input-group input:focus{
+    border-color:  #007bff;
+    outline: none;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.options label{
+    color: #4facfe;
+}
+
+.options a{
+    color: #007bff;
+    text-decoration: none;
+}
+
+.options a:hover{
+    color: rgb(212, 87, 87);
+    text-decoration: underline;
+}
+
+
+
+.login-btn{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    color: white;
+    background-color: rgb(156, 77, 77);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover{
+    background-color: #0056b3;
+}
+
+.signup-link{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #c99027;
+}
+
+.signup-link a{
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+</style>
+
+<body>
+    <div class="container">
+            <h2>Login</h2>
+            <form action=""login" method="post">
+            <div class="input-group">
+                <label for="username"> Username or Email</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+            </div>
+            <div class="options">
+                <label><input type="checkbox" name="remember">Remember Me</label>
+                <a href="#" class="forgot-pass">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Log In</button>
+            <p class="signup-link">Don't have account <a href="#">Sign up</a></p>
+            </form>  
+    </div>
+</body>
+</html>
